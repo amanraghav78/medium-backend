@@ -1,0 +1,4 @@
+backend/
+common/
+node_modules/
+*.md
