@@ -92,12 +92,23 @@ blogRouter.put('/', async (c) => {
 
 //Todo: add pagination
 blogRouter.get('/bulk', async (c) => {
-    const body = await c.req.json();
+    //const body = await c.req.json();
     const prisma = new PrismaClient({
       datasourceUrl: c.env.DATABASE_URL,
     }).$extends(withAccelerate())
 
-    const blogs = await prisma.blog.findMany();
+    const blogs = await prisma.blog.findMany({
+        select: {
+            content: true,
+            thumbnail: true,
+            id: true,
+            author: {
+                select: {
+                    name: true
+                }
+            }
+        }
+    });
 
     return c.json({
         blogs
