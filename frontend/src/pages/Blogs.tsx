@@ -11,6 +11,8 @@ export const Blogs = () => {
         </div>
     }
     
+
+
     return <div>
             <Appbar />
             <div className="flex justify-center">
@@ -20,7 +22,7 @@ export const Blogs = () => {
                     authorName= {blog.author.name || "Aman"}
                     title= {blog.thumbnail}
                     content= {blog.content}
-                    publishedDate= {"9th June 2024"}
+                    publishedDate= {"10th June 2024"}
                 />)}
                
             </div>
