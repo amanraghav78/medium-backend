@@ -26,7 +26,7 @@ export const FullBlog= ({ blog } : {blog : Blog}) => {
                         {blog.author.name || "Aman"}    
                     </div>
                     <div className="text-slate-500 pt-2">
-                         Aman is a passionate writer and tech enthusiast with a knack for breaking down complex topics into engaging and easy-to-understand content. With a background in writing, they bring a unique perspective to their writing, making technology accessible to everyone.
+                         Aman is a passionate writer and tech enthusiast with a knack for breaking down complex topics into engaging and easy-to-understand content. With a background in writing, they bring a unique perspective to their writing, making words accessible to everyone.
                     </div>
                 </div>
             </div>
